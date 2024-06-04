@@ -51,7 +51,7 @@ class Airplane {
     }
 
     Airplane(String userManufacturer, int userYear, int userLength, int userWeight) {
-        this.year = userYear;
+         this.year = userYear;
         this.length = userLength;
         this.weight = userWeight;
         this.manufacturer = userManufacturer;

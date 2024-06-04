@@ -1,4 +1,4 @@
-
+package day5;
 
 
 public class Lesson5_2 {
