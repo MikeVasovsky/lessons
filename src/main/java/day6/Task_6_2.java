@@ -1,7 +1,5 @@
 package day6;
 
-import java.util.Scanner;
-
 public class Task_6_2 {
     public static void main(String[] args) {
         Airplane newAirplane = new Airplane("Pilatus Aircraft", 2000, 7000,0);
@@ -12,19 +10,14 @@ public class Task_6_2 {
         newAirplane.fillUp(22);
         newAirplane.info();
         System.out.println(newAirplane.getFuel());
-
-
-
     }
 }
-
 class Airplane {
     private String manufacturer;
     private int year;
     private int length;
     private int weight;
-    private static int fuel = 0;
-    private int airplaneFuel=0;
+    private  int fuel ;
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
@@ -51,18 +44,16 @@ class Airplane {
     }
 
     Airplane(String userManufacturer, int userYear, int userLength, int userWeight) {
-         this.year = userYear;
+        this.year = userYear;
         this.length = userLength;
         this.weight = userWeight;
         this.manufacturer = userManufacturer;
     }
-
     void info() {
-        System.out.println("Изготовитель: " + manufacturer + " , год выпуска: " + year +", длина: "+length+ ", вес: " + weight + ", количество топлива в баке: " + airplaneFuel);
+        System.out.println("Изготовитель: " + manufacturer + " , год выпуска: " + year +", длина: "+length+ ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
-
-    int fillUp(int n) {
-       return airplaneFuel+=n;
+    public void fillUp(int n) {
+        fuel = fuel + n;
     }
 }
 

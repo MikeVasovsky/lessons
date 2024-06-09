@@ -8,13 +8,12 @@ public class Task_6_3 {
         Teacher teacher = new Teacher("Иван","Математика");
         Student student = new Student("Вася");
         teacher.evaluate(student);
-
     }
 }
 
 
  class Student {
-    String name;
+   private String name;
 
     Student(String studentName){
         this.name=studentName;
@@ -32,6 +31,7 @@ public class Task_6_3 {
 class Teacher{
     private String name;
     private String schoolSubject;
+    Random random = new Random();
 
     Teacher(String teacerName, String teacherSchoolSubject){
         this.name=teacerName;
@@ -55,21 +55,18 @@ class Teacher{
     }
 
     void evaluate(Student student){
-        Random random = new Random();
-        int grade = random.nextInt((5)+2);
+        String a;
+        int grade = random.nextInt((4)+2);
         if (grade==2){
-            System.out.println("Преподаватель "+ getName()+" оценил студента с именем "+student.getStudentName()+" по предмету "+getSchoolSubject()+" на оценку 'неудовлетворительно'");
+            a="Неудовлетворительно";
         } else if (grade==3){
-            System.out.println("Преподаватель "+ getName()+" оценил студента с именем "+student.getStudentName()+" по предмету "+getSchoolSubject()+" на оценку 'удовлетворительно'");
-
+            a="Удовлетворительно";
         } else if (grade==4){
-            System.out.println("Преподаватель "+ getName()+" оценил студента с именем "+student.getStudentName()+" по предмету "+getSchoolSubject()+" на оценку 'хорошо'");
-
+            a="Хорошо";
         }else {
-            System.out.println("Преподаватель "+ getName()+" оценил студента с именем "+student.getStudentName()+" по предмету "+getSchoolSubject()+" на оценку 'отлично'");
-
+            a="Отлично";
         }
-
+        System.out.println("Преподаватель "+ getName()+" оценил студента с именем "+student.getStudentName()+" по предмету "+getSchoolSubject()+" на оценку "+a);
     }
 }
 
