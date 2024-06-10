@@ -12,9 +12,11 @@ class Airplane {
     static void compareAirplanes(Airplane airplaneOne, Airplane airplaneTwo){
         if (airplaneOne.length>airplaneTwo.length){
             System.out.println("Первый самолет длинее");
-        }else {
+        }else if (airplaneOne.length< airplaneTwo.length){
             System.out.println("второй самолет длинее");
-
+        }
+        else {
+            System.out.println("Самолеты равны");
         }
     }
 
