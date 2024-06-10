@@ -16,6 +16,10 @@ public class Task2 {
 
 
         System.out.println(Player.getCountPlayers());
-        fivePlayer.info();
+        System.out.println(firstPlayer.getStamina());
+        System.out.println(Player.getCountPlayers());
+        firstPlayer.run(firstPlayer);
+        System.out.println(firstPlayer.getStamina());
+        System.out.println(Player.getCountPlayers());
     }
 }
