@@ -7,6 +7,8 @@ public class Task1 {
         System.out.println(student.getGroupName());
         System.out.println(teacher.getSubjectName());
 
+
+
         student.printInfo();
         teacher.printInfo();
 
