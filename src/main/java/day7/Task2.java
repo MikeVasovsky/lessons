@@ -21,5 +21,9 @@ public class Task2 {
         firstPlayer.run(firstPlayer);
         System.out.println(firstPlayer.getStamina());
         System.out.println(Player.getCountPlayers());
+
+        StringBuilder a = new StringBuilder("Hello");
+        a.append(" safasf").append("23423");
+        System.out.println(a.toString());
     }
 }

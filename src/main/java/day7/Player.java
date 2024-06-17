@@ -22,14 +22,14 @@ public class Player {
     }
 
     int run(Player player) {
-        while (player.stamina != 0) {
+
             if (player.stamina > 0) {
                 player.stamina --;
                 if (stamina == 0) {
                     countPlayers --;
                 }
             }
-        }
+
         return countPlayers;
     }
 
